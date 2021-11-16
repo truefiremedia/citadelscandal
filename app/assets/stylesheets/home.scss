@@ -1,0 +1,122 @@
+.main{
+	padding-top: 100px;
+  a{
+    color: #b59e5d;
+    text-decoration: underline;
+    &:hover{
+    	color: #424242;
+    }
+  }
+  h1{
+  	color: #b59e5d;
+  }
+}
+
+.article{
+	letter-spacing: 0.025em;
+	margin-bottom: 72px;
+	opacity: 0;
+	will-change: opacity, transform;
+	transform: translateY(25%);
+	transition: opacity .75s ease 200ms, transform .75s ease-out;
+}
+
+.rh-docs{
+	margin-bottom: 48px;
+	.col{
+		max-height: 400px;
+		img{
+			width: 100%;
+		}
+	}
+}
+
+.img-fluid{
+	opacity: 0;
+	transition: opacity 1s ease 250ms;
+}
+
+.img_wr{
+	height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+  // transform: translateY(50%);
+  // opacity: 0;
+  visibility: hidden;
+  animation-duration: 1s;
+  animation-name:none;
+  animation-fill-mode: both;
+  img{
+  	visibility: inherit;
+  	height: 100%;
+  	-o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    font-family: 'object-fit: cover; object-position: center';
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    transition: opacity .2s ease-in-out,-webkit-transform .95s cubic-bezier(.25, .46, .45, .94);
+    transition: opacity .2s ease-in-out,transform .95s cubic-bezier(.25, .46, .45, .94);
+    transition: opacity .2s ease-in-out,transform .95s cubic-bezier(.25, .46, .45, .94),-webkit-transform .95s cubic-bezier(.25, .46, .45, .94);
+  }
+  &:hover{
+  	img{
+  		-webkit-transform: scale(1.07);
+  		transform: scale(1.07);
+  	}
+  }
+}
+.im-1{
+	// transition: opacity 600ms ease-out, transform 450ms ease-out;
+	animation-delay: 0.4s;
+}
+
+.im-2{
+	// transition: opacity 700ms ease-out, transform 550ms ease-out;
+	animation-delay: 0.7s;
+}
+
+.im-3{
+	// transition: opacity 800ms ease-out, transform 650ms ease-out;
+	animation-delay: 1s;
+}
+
+.a_section.inView{
+	.article{
+		opacity: 1;
+		transform: translateY(0%);
+	}
+	.img_wr{
+		visibility: visible;
+		animation-name: fadeInUp;
+	}
+	.img-fluid{
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+@media screen and (max-width: 960PX) {
+	.rh-docs {
+    margin-bottom: 75px;
+    .col{
+    	padding: 2px;
+    }
+	}
+}

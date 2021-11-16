@@ -1,0 +1,246 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent; 
+}
+
+::selection {
+    background-color: #000;
+    color: #fff;
+}
+::-moz-selection {
+    background-color: #000;
+    color: #fff;
+}
+
+body{
+    color: #777777 !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    // background: #f7f7f8 !important;
+    background: #ececec !important;
+}
+
+input[type="button"]{
+    outline: none !important;
+    border: none !important;
+}
+button{
+    outline: none !important;
+    border: none !important;
+}
+.btn:focus {
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.btn-close:focus {
+    box-shadow: none !important;
+}
+.btn-sc{
+    display: inline-block;
+    background: #b59e5d;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(255, 255, 255) !important;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding: 14px 16px;
+    cursor: pointer;
+    margin-top: 40px;
+    text-decoration: none !important;
+}
+
+ .navbar{
+    color: #b59e5d;
+    background: #ffffff;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    padding: 10px;
+    .navbar-brand{
+        color: #b59e5d;
+        padding: 0 !important;
+    }
+ }
+ .navbar-nav{
+    .nav-link{
+        font-size: 1.5rem;
+        &:hover{
+            color: #000 !important;
+        }
+    }
+ }
+ 
+ .navbar-toggler:focus {
+    box-shadow: none !important;
+}
+ .nav.sticky-top{
+    top: 45px;
+    // z-index: 1030;
+    background: #ffffff;
+    span{
+        font-weight: 600;
+    }
+ }
+ .nav-link{
+    color: inherit !important;
+    border-bottom: 3px solid transparent !important;
+ }
+ .nav-link.active{
+    background-color: transparent !important;
+    border-bottom: 3px solid #b59e5d !important;
+ }
+
+ .container{
+    margin-top: 46px;
+ }
+
+ .footer{
+    color: #c9c9c9;
+    a{
+        color: #c9c9c9 !important; 
+        text-decoration: none !important;
+    }
+ }
+
+.twitter-i{
+    color: #1d9bf0 !important;
+ }
+.reddit-i{
+    color: #ff4500 !important;
+}
+.news-i{
+    color: black !important;
+}
+
+.modal-backdrop{
+    opacity: 0.75 !important;
+}
+
+#imgModal{
+    .modal-content{
+        background-color: transparent !important;
+        border: none !important;
+        border-radius: unset !important;    
+        .modal-body{
+            padding: 0 !important;
+            // img{
+            //     width: auto;
+            // }
+        }
+        .modal-close{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            padding: 0;
+            background: rgba(0, 0, 0, 0.7);
+            opacity: .75;
+            z-index: 5;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.modal.fade .modal-dialog {
+    max-width: fit-content;
+}
+
+.edit-img-btn{
+    width: 100%;
+    height: 100%;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(76deg) brightness(106%) contrast(102%);
+}
+
+.edit-remove{
+    background: url('cancel.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#wh-cards{
+    .col-md-6{
+        padding: 10px;
+    }
+    .card{
+        font-size: 16px;
+        background-color: #e6e6e6;
+        .card-title{
+            color: #b59e5d !important;
+        }
+        .card-text{
+            a{
+                color: #b59e5d;
+                text-decoration: underline;
+                &:hover{
+                    color: #424242;
+                }
+            }
+        }
+
+    }
+}
+
+.a_section{
+    overflow: hidden;
+}
+
+@media screen and (max-width:959px){
+
+}
+
+@media screen and (max-width:960px) {
+    body{
+        font-size: 18px !important;
+    }
+    .btn-sc {
+        letter-spacing: 2px;
+        padding: 10px 5px;
+        margin-top: 5px;
+        font-size: 12px;
+    }
+
+    .navbar{
+        font-size: 20px;
+    }
+
+    #wh-cards{
+        .col-md-6{
+            padding: 4px;
+        }
+        .card{
+            font-size: 14px;
+            .card-title{
+                font-size: 16px;
+            }
+            .card-text{
+                a{
+                    color: #b59e5d;
+                    text-decoration: underline;
+                    &:hover{
+                        color: #424242;
+                    }
+                }
+            }
+
+        }
+    }
+}

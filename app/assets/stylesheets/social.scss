@@ -1,0 +1,290 @@
+.social{
+	a{
+	    color: inherit;
+	    text-decoration: none;
+	    &:hover{
+	    	color: #424242;
+	    }
+	}
+}
+.soc-intro{
+	position: relative;
+	// height: 95vh;
+	height: calc(100vh - 46px);
+	border-bottom: 0;
+	margin-bottom: 40px;
+	h4{
+		text-align: center;
+		opacity: 0;
+		transition: opacity 1.5s ease-out;
+	}
+	.intro-i{
+		position: absolute;
+	    bottom: 25%;
+	    left: 50%;
+	    width: 50%;
+	    transform: translateX(-50%);
+	    font-size: 30px;
+	    .fa-twitter{
+	    	opacity: 0;
+	    	transition: opacity 1s ease-out 1.75s;
+	    }
+	    .fa-reddit{
+	    	opacity: 0;
+	    	transition: opacity 1s ease-out 2s;
+	    }
+	    .fa-newspaper{
+	    	opacity: 0;
+	    	transition: opacity 1s ease-out 2.3s;
+	    }
+	}
+}
+.soc-hero{
+	height: 100vh;
+	width: 100%;
+	// border-bottom: 0;
+	// overflow: hidden;
+	position: relative;
+    overflow: hidden;
+    font-size: 24px;
+	img{
+		width: 100%;
+		-o-object-fit: cover;
+	    object-fit: cover;
+	    -o-object-position: center;
+	    object-position: center;
+	    font-family: 'object-fit: cover; object-position: center';
+	}
+	.soc-bimg{
+		width: 50%;
+    	height: 65%;
+		position: absolute;
+	    left: 10%;
+	    top: 50%;
+	    transform: translateY(-50%);
+	 	transition: -webkit-clip-path 800ms cubic-bezier(.4,0,.2,1),clip-path 800ms cubic-bezier(.4,0,.2,1);
+	    will-change: -webkit-clip-path,clip-path;
+	    -webkit-clip-path: polygon(0% 50%,0% 100%,0% 100%,0% 50%,100% 50%,100% 0%,100% 0%,100% 50%,100% 50%,100% 50%);
+	    clip-path: polygon(0% 50%,0% 100%,0% 100%,0% 50%,100% 50%,100% 0%,100% 0%,100% 50%,100% 50%,100% 50%);
+	}
+	.hero-quote{
+		width: 50%;
+    	height: 50%;
+		position: absolute;
+	    right: 0%;
+	    top: 50%;
+	    color: #b59e5d;
+	    transform: translateY(-50%);
+	    opacity: 0;
+	    transition: opacity 1s ease-out .7s;
+	}
+}
+
+.soc-intro.inView{
+	h4{
+		opacity: 1;
+	}
+	.intro-i{
+		
+	    .fa-twitter{
+	    	opacity: 1;
+	    }
+	    .fa-reddit{
+	    	opacity: 1;
+	    }
+	    .fa-newspaper{
+	    	opacity: 1;
+	    }
+	}
+}
+.soc-hero.inView{
+	.soc-bimg{
+		-webkit-clip-path: polygon(0% 50%,0% 100%,100% 100%,100% 50%,100% 50%,100% 0%,0% 0%,0% 50%,100% 50%,100% 50%);
+    	clip-path: polygon(0% 50%,0% 100%,100% 100%,100% 50%,100% 50%,100% 0%,0% 0%,0% 50%,100% 50%,100% 50%);
+	}
+	.hero-quote{
+		opacity: 1;
+	}
+}
+// Twitter
+.twitter-wrapper{
+    background: #e6e6e6;
+    border: 1px solid #dbdbdb;
+    overflow: hidden;
+    .twitter-results{
+    	min-height: 500px;
+    }
+    .twitter-results:empty {
+	  &::before {
+	    content: "Loading...";
+	  }
+	}
+}
+
+.rssapp-feed{
+    background: #e6e6e6;
+    .card-root{
+        background: #f0f2f5;
+    }
+}
+// Reddit
+.reddit-wrapper{
+    background: #e6e6e6;
+    border: 1px solid #dbdbdb;
+    overflow: hidden;
+}
+#reddit-results{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 500px;
+    h4{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+.r_post_cont{
+    display: block;
+    width: 65%;
+    margin: auto;
+    background: white;
+    margin-bottom: 20px;
+    border: 1px solid #dbdbdb;
+    padding: 5px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    &:hover{
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
+    }
+    .r_post_wr{
+        width: 100%;
+        .r_post_header{
+            display: -ms-flexbox;
+            display: flex;
+            width: 100%;
+            .r_avatar{
+
+            }
+            .r_h{
+                width: 90%;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                margin-left: 8px;
+                .r_sub{
+                    font-size: 90%;
+                    font-weight: 500;
+                    span{
+                    	color: #90989f;
+                    	font-size: 75%;
+                    }
+                }
+                .r_author{
+                    color: #90989f;
+                    font-size: 75%;
+                    line-height: 1;
+                }
+            }
+        }
+        .r_post_data{
+            width: 100;
+            .r_title{
+                font-weight: 600;
+                margin: 15px 8px;
+            }
+            .r_img{
+                background: #ffffff;
+                img{
+                    display: block;
+                    max-height: 500px;
+                    width: auto;
+                    max-width: 100%;
+                    margin: auto;
+                }
+            }
+        }
+        .r_post_ft{
+            -ms-flex-align: center;
+            align-items: center;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            height: 40px;
+            color: #898989;
+            font-size: 75%;
+            margin: 8px;
+            .r_score{
+                border: 1px solid #dbdbdb;
+                border-radius: 20px;
+                padding: 2px 10px;
+            }
+            .r_comment{
+                margin-left: 20px;
+                border: 1px solid #dbdbdb;
+                border-radius: 20px;
+                padding: 2px 10px;
+            }
+        }
+    }
+}
+
+// News
+.news-wrapper{
+    background: #e6e6e6;
+    border: 1px solid #dbdbdb;
+    overflow: hidden;
+    .news-results{
+        min-height: 500px;
+    }
+}
+.twitter-card-container {
+	margin: auto !important;
+}
+
+@media screen and (max-width: 960px) {
+    .soc-intro{
+    	.intro-i{
+    		font-size: 24px;
+    		width: 80%;
+    	}
+    	h4{
+    		font-size: 16px;
+    	}
+    }
+    .soc-hero{
+    	height: 75vh;
+    	font-size: 20px;
+    	margin-bottom: 75px;
+    	.soc-bimg{
+    		height: auto;
+    		left: 5%;
+    	}
+    	.hero-quote{
+    		width: 60%;
+    		font-size: 16px;
+    	}
+    }
+
+    .r_post_cont {
+    	width: 100%;
+    	font-size: 16px;
+    	margin-bottom: 10px;
+    	.r_post_wr{
+    		.r_post_data{
+    			.r_img{
+    				img{
+    					// width: 100%;
+    				}
+    			}
+    		}
+    	}
+    }
+}
+@media screen and (max-width: 576px) {
+	.s-widgets{
+		width: 100vw;
+		margin-left: calc(-50vw + 50%);
+	}
+}

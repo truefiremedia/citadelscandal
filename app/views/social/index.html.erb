@@ -1,0 +1,83 @@
+<div class="social">
+    <div class="a_section soc-intro d-flex align-items-center">
+      <div class="m-auto">
+        <h4><strong>#CitadelScandal</strong> circulating on social media</h4>
+      </div>
+      <div class="intro-i d-flex justify-content-center">
+        <div class="col text-center">
+          <i class="fab fa-twitter"></i>
+        </div>
+        <div class="col text-center">
+          <i class="fab fa-reddit"></i>
+        </div>
+        <div class="col text-center">
+          <i class="far fa-newspaper"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="a_section soc-hero">
+      <div class="soc-bimg">
+        <%= image_tag('https://cdn.britannica.com/99/96899-050-CADC4254/Henry-Ford.jpg', class: "hero-img") %>
+      </div>
+      <div class="hero-quote d-flex flex-column align-items-center justify-content-center">
+        <p>“It is well enough that people of the nation do not understand our banking and monetary system, for if they did, I believe there would be a revolution before tomorrow morning.” - Henry Ford</p>
+      </div>
+    </div>
+
+    <div class="a_section mb-5">
+      <div class="article">
+        <p>
+          This has become a David vs Goliath story with small retail investors taking on billion-dollar institutions. What started as a way to profit from a wise investment has transformed into a fight to end systemic corruption.
+        </p>
+        <p>
+          Disappointed with the lack of action from market regulators, retail investors are turning to social media to raise awareness to this corruption in an attempt to bring about change.
+        </p>
+      </div> 
+    </div>
+
+    <div class="s-widgets">
+        <ul class="nav sticky-top nav-justified" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="pills-twitter-tab" data-bs-toggle="pill" data-bs-target="#twitter-tab" type="button" role="tab" aria-controls="twitter-tab" aria-selected="true">
+                <i class="fab fa-twitter twitter-i"></i>
+                <span>Twitter</span>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="pills-reddit-tab" data-bs-toggle="pill" data-bs-target="#reddit-tab" type="button" role="tab" aria-controls="reddit-tab" aria-selected="false">
+                <i class="fab fa-reddit reddit-i"></i>
+                <span>Reddit</span>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="pills-news-tab" data-bs-toggle="pill" data-bs-target="#news-tab" type="button" role="tab" aria-controls="news-tab" aria-selected="false">
+                <i class="far fa-newspaper news-i"></i>
+                <span>News</span>
+              </a>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane twitter-wrapper fade show active" id="twitter-tab" role="tabpanel" aria-labelledby="pills-twitter-tab">
+              <div class="twitter-results">
+                <rssapp-wall id="rY6XdI19cFn6OHFO"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+              </div>
+            </div>
+
+            <div class="tab-pane reddit-wrapper fade" id="reddit-tab" role="tabpanel" aria-labelledby="pills-reddit-tab">
+              <div id="reddit-results">
+        
+              </div>
+            </div>
+
+            <div class="tab-pane news-wrapper fade" id="news-tab" role="tabpanel" aria-labelledby="pills-news-tab">
+              <div class="news-results">
+                <rssapp-list id="dcEEF5PFml9QuTJE"></rssapp-list><script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+<%= javascript_pack_tag 'social' %>

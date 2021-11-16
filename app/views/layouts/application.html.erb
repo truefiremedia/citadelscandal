@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CitadelScandal</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= csp_meta_tag %>
+    <%= favicon_link_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_pack_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+
+  <body>
+    <%= render '/layouts/header' %> 
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="imgModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          
+          <button class="modal-close" data-dismiss="modal" aria-label="Close"><div class="edit-img-btn edit-remove"></div></button>
+          <div class="modal-body">
+            <img src="" id="ImgM" width="100%" height="auto">
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      
+      <%= yield %>
+
+      <%= render '/layouts/footer' %> 
+    </div>
+
+  </body>
+</html>
