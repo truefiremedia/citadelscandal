@@ -1,5 +1,5 @@
 
-fetch('http://www.reddit.com/search.json?q=citadelscandal&sort=hot')
+fetch('https://www.reddit.com/search.json?q=citadelscandal&sort=hot')
   .then(response => response.json())
   .then(data => {
   	let output = ''
